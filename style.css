@@ -5,7 +5,11 @@
     margin:0;
     box-sizing: border-box;
     font-family: 'Noto Serif JP', serif;
-    transition:all  0.8s cubic-bezier(.38.1.15,.7,1.12); 
+    transition:all  0.8s cubic-bezier(.38.1.15,.7,1.12);
+}
+
+.navbar{
+    background-color: #eff6ff !important;
 }
 
 .landing{
@@ -25,3 +29,5 @@
 .nav-link a:hover{
     color:white;
 }
+
+
