@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,9 +13,10 @@
     
   </head>
   <body>
+
       <!--Navbar-->
       
-      <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
         <div class="container-fluid">
           <a class="navbar-brand ps-4 fs-4" href="#">Covid-19</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +31,10 @@
                 <a class="nav-link fw-bolder" href="#precautions">Precautions</a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link fw-bolder" href="#">Symptoms</a>
+                <a class="nav-link fw-bolder" href="#symptoms">Symptoms</a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link fw-bolder" href="#">Important Links</a>
+                <a class="nav-link fw-bolder" href="#importantlinks">Important Links</a>
               </li>  
             </ul>
           </div>
@@ -45,18 +46,254 @@
 
       <section class="landing">
         <div class="main-text pt-5">
-        <h2 class="text-center fs-1 fw-bolder "> #BREAKTHECHAIN</h2>
-        <p class="text-center fs-1 fw-bolder">Stay Home, Stay Safe</p>
-        <div class="text-center"><button type="button" class="btn btn-primary">How to Prevent</button></div>
+        <h2 data-aos="fade-right" class="text-center fs-1 fw-bolder"> #BREAKTHECHAIN</h2>
+        <p data-aos="fade-left" class="text-center fs-1 fw-bolder">Stay Home, Stay Safe</p>
+        <div class="text-center"><button type="button" class="btn btn-primary" onclick="Vaccine()">Register for Vaccine</button></div>
         </div>
     </section>
    
     <!--precautions-->
     <section class="precautions" id="precautions">
-        <h1>Precautions</h1>
+        <div class="text-center">
+          <h2 data-aos="fade-right" class="fs-1 my-5"><u>Precautions</u></h2>
+        </div>
+
+        <!--Cards-->
+        <div class="container">
+          <div class="row">
+            <div class="card mx-auto my-3" style="width: 18rem;">
+              <img src="./images/pre-1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Use Sanitizer</h5>
+                <p class="card-text">The World Health Organization has recommended using a hand sanitizer that has at least 60% alcohol.</p>
+            
+              </div>
+            </div>
+
+            <div class="card mx-auto my-3" style="width: 18rem;">
+              <img src="./images/pre-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Social Distancing</h5>
+                <p class="card-text">Maintain at least a 1-metre distance between yourself and others to reduce your risk of infection when they cough, sneeze or speak.</p>
+                
+              </div>
+            </div>
+
+            <div class="card mx-auto my-3" style="width: 18rem;">
+              <img src="./images/pre-3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Dont touch face</h5>
+                <p class="card-text">To help prevent infections, keep your hands away from your eyes, nose, and mouth especially during the COVID-19 pandemic.</p>
+                
+              </div>
+            </div>
+
+          </div>
+          <!--row 2-->
+
+          <div class="row">
+            <div class="card mx-auto my-3" style="width: 18rem;">
+              <img src="./images/pre-4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Wash Hands</h5>
+                <p class="card-text">To prevent the spread of germs during the COVID-19 pandemic, you should also wash your hands with soap and water for at least 20 seconds or use a hand sanitizer with at least 60% alcohol to clean hands</p>
+            
+              </div>
+            </div>
+
+            <div class="card mx-auto my-3" style="width: 18rem;">
+              <img src="./images/pre-5.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Sneezing Etiquettes</h5>
+                <p class="card-text">Covering coughs and sneezes and keeping hands clean can help prevent the spread of serious respiratory illnesses like influenza, respiratory syncytial virus (RSV), whooping cough, and COVID-19</p>
+                
+              </div>
+            </div>
+
+            <div class="card mx-auto my-3" style="width: 18rem;">
+              <img src="./images/pre-6.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Wear Mask</h5>
+                <p class="card-text">Masks should completely cover the nose and mouth and fit snugly against the sides of face without gaps.When you wear a mask, you protect others as well as yourself.</p>  
+              </div>
+            </div>
+          </div>
+        </div> 
     </section>
+
+    <!--Symptoms-->
+
+    <section class="symptoms" id="symptoms">
+      <div class="text-center">
+        <h2 data-aos="fade-right" class="fs-1 my-5"><u>Symptoms</u></h2>
+      </div>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="1000">
+          <img src="./images/symp-a.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="fs-1 fw-bolder">Cough</h5>
+          
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./images/symp-b.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="fs-1 fw-bolder">Throat Pain</h5>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/symp-c.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="fs-1 fw-bolder">Cold</h5>
+            
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/symp-d.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="fs-1 fw-bolder">Temperature</h5>
+            
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/symp-e.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="fs-1 fw-bolder">Headache</h5>
+            
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/symp-f.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="fs-1 fw-bolder">Vomiting</h5>
+            
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </section>
+
+    <!--Important links-->
+
+    <section class="importantlinks" id="importantlinks">
+      <div class="text-center">
+        <h2 data-aos="fade-right" class="fs-1 my-5"><u>Important Links</u></h2>
+      </div>
+
+      <div class="accordion " id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Official GoI data, information and advisory on Covid-19
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <a href="https://www.mygov.in/covid-19">https://www.mygov.in/covid-19</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              official data and advice on Covid-19 from GoI.
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <a href="https://www.mohfw.gov.in/">https://www.mohfw.gov.in/</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              World-wide Covid-19 situation reports and practical advice.
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Vaccine Registration 
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <a href="https://www.cowin.gov.in/home">https://www.cowin.gov.in/home</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-5">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Information from US CDC
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <a href="https://www.cdc.gov/">https://www.cdc.gov/</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </section>
+
+
+      <!--Footer-->
+
+      <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          Made with ❤ by <a href="https://github.com/rohitjoshi6">Rohit Joshi </a>
+          
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
     
+
+    <script>
+      function Vaccine()
+      {
+           location.href = "https://www.cowin.gov.in/home";
+      } 
+      </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>    
   </body>
 </html>
