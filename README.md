@@ -2,7 +2,7 @@
 
 ![Mockup](./images/Mockup.png)
 
-
+<div align="center">
 - Responsive
 - AOS (Animate on scroll)
 - Smooth Scroll
