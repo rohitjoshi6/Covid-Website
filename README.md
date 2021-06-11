@@ -2,7 +2,6 @@
 
 ![Mockup](./images/Mockup.png)
 
-<p align="center">
 - Responsive
 - AOS (Animate on scroll)
 - Smooth Scroll
@@ -10,4 +9,3 @@
 - Bootstrap5 Carousel
 - Bootstrap5 Accordian
 
-</p>
